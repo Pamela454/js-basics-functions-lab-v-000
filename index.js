@@ -4,7 +4,7 @@ function distanceFromHqInBlocks (blockDistance) {
   if (blockDistance > 42) {
     return blockDistance - 42;
   } else {
-  return 42 - BlockDistance;
+  return 42 - blockDistance;
   }
 }
 
