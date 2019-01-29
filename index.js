@@ -13,16 +13,25 @@ function distanceFromHqInFeet (blockNumber) {
 }
 
 
-function calculatesFarePrice(distanceFromHqInFeet) {
-  if (distanceFromHqInFeet < 400) {
-    return 0;
-  } else if (distanceFromHqInFeet > 400 && < 2000) {
-    return .02 * distanceFromHqInFeet;
+function distanceTravelledInFeet (start, destination) {
+  if (start < destination) {
+    return (destination - start) * 264;
+  } else {
+    return (start - destination) * 264;
   }
-   else if (distanceFromHqInFeet > 2000 && < 2500) {
-    return 25;
-   }
-   else {
-     console.log ("cannot travel that far")
-   }
 }
+
+function calculatesFarePrice (start, destination) {
+  const distance = distanceTravelledInFeet(start, destination);
+
+  if (distance <= 400) {
+    return 0;
+  } else if (distance > 400 && distance <= 2000) {
+    return .02 * (distance - 400);
+  } else if (distance > 2000 && distance < 2500) {
+    return 25;
+  } else {
+    return 'cannot travel that far';
+  }
+}
+
