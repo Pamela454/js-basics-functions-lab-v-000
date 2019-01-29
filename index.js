@@ -20,7 +20,7 @@ function calculatesFarePrice(distanceFromHqInFeet) {
     return .02 * distanceFromHqInFeet;
   }
    else if (distanceFromHqInFeet > 2000 && < 2500) {
-    console.log(25);
+    return 25;
    }
    else {
      console.log ("cannot travel that far")
