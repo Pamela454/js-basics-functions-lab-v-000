@@ -17,7 +17,7 @@ function calculatesFarePrice(distanceFromHqInFeet) {
   if (distanceFromHqInFeet < 400) {
     return 0;
   } else if (distanceFromHqInFeet > 400 && < 2000) {
-    console.log(.02 * distanceFromHqInFeet);
+    return .02 * distanceFromHqInFeet;
   }
    else if (distanceFromHqInFeet > 2000 && < 2500) {
     console.log(25);
