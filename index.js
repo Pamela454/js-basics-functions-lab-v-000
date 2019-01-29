@@ -8,10 +8,10 @@ function distanceFromHqInBlocks (blockDistance) {
   }
 }
 
-function distanceFromHqInFeet (distanceFromHqInBlocks) {
-  (distanceFromHqInBlocks)* 264
-  console.log(result);
+function distanceFromHqInFeet (blockNumber) {
+  return distanceFromHqInBlocks(blockNumber) * 264;
 }
+
 
 function calculatesFarePrice(distanceFromHqInFeet) {
   if (distanceFromHqInFeet < 400) {
